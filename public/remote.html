@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>遥控器</title>
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+		<link href="stylesheets/cover.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="cover-container">
+					<div class="masthead clearfix">
+						<div class="inner">
+							<h3 class="masthead-brand">遥控器</h3>
+						</div>
+					</div>
+					<div class="inner cover">
+						<p class="lead">点击发送键，发送一个视频到大屏幕</p>
+						<p class="lead">
+							<a id="send" href="#" class="btn btn-lg btn-default">发送</a>
+						</p>
+					</div>
+					<div class="mastfoot">
+						<div class="inner">
+							<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="https://cn.avoscloud.com/scripts/lib/av-0.4.1.min.js"></script>
+		<script src="/js/av-chat-min.js"></script>
+		<script>
+			var chat, guid
+				appid  = 'fpj2ki9n5sjv9bq6ksk9jhnbrfct4jzg5hzt9e37if092ny7';
+			$(document).ready(function(){
+				console.log('loaded');
+				guid = location.hash.substr(1);
+				console.log(guid);
+				chat = new AVChatClient({
+				appId: appid,
+				peerId: guid+'-remote',
+				secure:true,
+				watchingPeerIds: [guid]
+			});
+			chat.open().then(function(){
+				console.log('connected');
+				$("#send").click(function(){
+					console.log('send');
+					chat.send('r0148tvtp1f', guid);
+				});
+			});
+			
+			});
+			
+		
+		
+		</script>
+	</body>
+</html>
