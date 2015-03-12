@@ -1,1 +1,343 @@
-Congrats, you just set up your cloud code project.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PUSH TO TV</title>
+
+  <!-- Bootstrap -->
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+  <link href="/stylesheets/video-js.css" rel="stylesheet">
+  <link href="/stylesheets/videojs-sublime-skin.min.css" rel="stylesheet" type="text/css">
+  <!-- font awesome for icons -->
+  <link href="/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- animated css  -->
+  <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css" media="screen">
+
+  <!-- custom css -->
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="screen">
+
+</head>
+<body data-spy="scroll" data-offset="80">
+
+<section id="home" data-stellar-background-ratio="0.5">
+  <video id="video" class="video-js player bg-video vjs-sublime-skin"
+         preload="auto" controls loop autoplay="true"
+         src=""
+         type='video/mp4'>
+  </video>
+  <div class="parallax-overlay"></div>
+
+  <div class="home-content text-center">
+    <div class="container hide">
+
+      <div class="step0">
+        <h1 style="color:#ffffff">加载中...</h1>
+      </div>
+
+      <div class="step1">
+        <span class="home-top-slide-text hidden-xs">
+          <div id="qrcode"></div>
+        </span>
+        <h1><span class="colored-text">扫二维码或输网址</span></h1>
+        <a id="remote_url" style="color:white" href="#" target="_blank"></a>
+      </div>
+
+      <div class="step2">
+        <h1 style="color:#ffffff">链接已经建立，等待播放内容</h1>
+      </div>
+
+      <div class="home-link-btn text-center">
+        <p class="scrollto"><a href="#about" class="btn btn-lg btn-dark-2">更多内容</a></p>
+      </div>
+    </div>
+  </div>
+</section><!--home section end-->
+<section id="navigation">
+  <div class="navbar navbar-default navbar-static-top " role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">airTV</a>
+      </div>
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-right scrollto">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#feature">功能</a></li>
+          <li><a href="#contact">建议反馈</a></li>
+        </ul>
+
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--navbar-default-->
+</section><!--navigation section end here-->
+<section id="feature" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center-heading text-center">
+          <h2>将视频投放到大屏幕上</h2>
+          <span class="icon"><i class="fa fa-desktop"></i></span>
+        </div><!--center heading-->
+      </div>
+    </div><!--center heading-->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+        <p class="lead margin-btm-30">
+          在电视上安装airTV或者打开这个网页后，仅需扫描一下二维码即可完全控制大屏幕。airTV仅有这么一个功能但力求稳定、高效。
+        </p>
+      </div>
+    </div>
+    <div class="row services">
+      <div class="col-md-4 margin-btm-30">
+        <div class="service-box wow animated fadeInUp"  data-wow-duration="700ms" data-wow-delay="300ms">
+          <i class="fa fa-tablet "></i>
+          <h3>操作简单</h3>
+          <p>只是简单扫描一下，不需要任何设备发现和设备匹配的工作，就像添加微信好友。</p>
+        </div>
+      </div><!--service col end-->
+      <div class="col-md-4 margin-btm-30">
+        <div class="service-box wow animated fadeInUp"  data-wow-duration="700ms" data-wow-delay="400ms">
+          <i class="fa fa-cloud"></i>
+          <h3>支持广泛</h3>
+          <p>
+            支持绝大部分视频网站（乐视、爱奇艺、搜狐、优酷、腾讯等）。
+            支持电视直播和任何自定义直播视频源。
+            支持本地视频文件。
+          </p>
+        </div>
+      </div><!--service col end-->
+      <div class="col-md-4 margin-btm-30">
+        <div class="service-box wow animated fadeInUp"  data-wow-duration="700ms" data-wow-delay="500ms">
+          <i class="fa fa-lightbulb-o"></i>
+          <h3>聪明</h3>
+          <p>自动播放你正在追的电视剧、综艺节目和动漫并推荐您可能喜欢的其他视频。</p>
+        </div>
+      </div><!--service col end-->
+
+    </div>
+  </div>
+  <div class="divided-50"></div>
+  <div class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 margin-btm-30">
+          <h3>
+
+            <strong>airTV</strong> 是最好的大屏幕播放软件
+
+          </h3>
+        </div>
+        <div class="col-sm-4">
+          <a href="#" class="btn btn-theme btn-lg">下载电视客户端</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!--about section end-->
+<section id="contact" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="center-heading text-center">
+          <h2 class=" wow animated fadeInRight"  data-wow-duration="700ms" data-wow-delay="100ms">建议反馈</h2>
+          <span class="icon"><i class="fa fa-phone"></i></span>
+        </div><!--center heading-->
+      </div>
+    </div><!--center heading-->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="lead">
+          有任何建议请联系我们，谢谢！
+        </p>
+      </div>
+    </div>
+    <div class="divided-50"></div>
+    <div class="row contact-form">
+      <div class="col-md-7 wow animated fadeInUp margin-btm-30"  data-wow-duration="700ms" data-wow-delay="300ms">
+        <form name="sentMessage" id="contactForm" method="post" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row control-group">
+                <div class="form-group col-xs-12 controls">
+                  <label>Name<span>*</span></label>
+                  <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <div class="row control-group">
+                <div class="form-group col-xs-12 controls">
+                  <label>Email Address<span>*</span></label>
+                  <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                  <p class="help-block"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12  controls">
+              <label>Phone Number<span>*</span></label>
+              <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="row control-group">
+            <div class="form-group col-xs-12 controls">
+              <label>Message<span>*</span></label>
+              <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <div class="row">
+            <div class="form-group col-xs-12">
+              <button type="submit" class="btn btn-theme btn-lg">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div><!--form col-->
+      <div class="col-md-5">
+        <div class=" margin-btm-30 address-info wow animated bounceIn"  data-wow-duration="700ms" data-wow-delay="200ms">
+          <h3>Our Office</h3>
+          <p><i class="fa fa-map-marker"></i> Address: 302012 Jaipur Name, City Name</p>
+          <p><i class="fa fa-phone"></i> Phone: (141) 456-7890</p>
+          <p><i class="fa fa-envelope"></i> Email: support@quick.com</p>
+          <p><strong>Monday - Friday : </strong> 9:30 Am - 5:30 Pm</p>
+          <p><strong>Saturday - Sunday: </strong> Closed</p>
+        </div>
+        <div class=" address-info wow animated bounceIn"  data-wow-duration="700ms" data-wow-delay="400ms">
+          <h3>Elsewhere</h3>
+          <ul class="list-inline social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!--contact-->
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 margin-btm-30">
+        <div class="footer-col">
+          <h3 class="widget-title">
+            About Quick Theme
+          </h3>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text
+          </p>
+        </div><!--footer-col-->
+
+        <div class="footer-col">
+          <ul class="list-inline social-1">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div><!--footer-col-->
+      </div>
+
+      <div class="col-sm-4 margin-btm-30">
+        <div class="footer-col">
+          <h3 class="widget-title">
+            Latest Tweets
+          </h3>
+        </div>
+        <div class="tweet"></div>
+
+      </div>
+
+      <div class="col-sm-4">
+        <div class="footer-col">
+          <h3 class="widget-title">
+            Subscribe to Newsletter
+          </h3>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+          </p>
+          <form role="form" class="subscribe-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter email to subscribe">
+                                    <span class="input-group-btn">
+                                        <a class="btn  btn-theme btn-lg" href="#">Ok</a>
+                                        <!--<button class="btn  btn-theme btn-lg">Ok</button>-->
+                                    </span>
+            </div>
+          </form>
+        </div><!--footer-col-->
+      </div>
+    </div>
+  </div>
+</footer><!--footer-->
+
+<div class="footer-btm">
+  <ul class="footer-nav list-inline text-center">
+    <li><a href="#">Terms of use</a></li>
+    <li><a href="#">Privacy and policy</a></li>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="typography.html">Typography</a></li>
+    <li><a href="#">Sign In</a></li>
+  </ul>
+  <div class="copyright text-center">
+    Copyright &copy; 2014. Quick Theme. Powered by <a href="#">bootstrap</a> and <a href="#">Design_mylife</a>
+  </div>
+</div><!--footer-btm-->
+<!--back to top-->
+<a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+<!--back to top end-->
+<!--scripts and plugins -->
+<!--must need plugin jquery-->
+<script src="/js/jquery.min.js"></script>
+<!--bootstrap js plugin-->
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/video.js" type="text/javascript"></script>
+
+
+<!--easing plugin for smooth scroll-->
+<script src="/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+<script src="/js/jquery.sticky.js" type="text/javascript"></script>
+<!--digit countdown plugin-->
+<script src="/js/jquery.counterup.min.js" type="text/javascript"></script>
+<!--on scroll animation-->
+<script src="/js/wow.min.js" type="text/javascript"></script>
+<!--owl carousel slider-->
+<script src="/js/owl.carousel.min.js" type="text/javascript"></script>
+
+<!--valid / working contact form js-->
+<script src="/js/contact_me.js" type="text/javascript"></script>
+<script src="/js/jqBootstrapValidation.js" type="text/javascript"></script>
+
+<script src="/js/jquery.cookie.js" type="application/javascript" ></script>
+<script src="/js/socket.io.js" type="application/javascript"></script>
+<script src="/js/jquery.qrcode.min.js"type="application/javascript" ></script>
+
+<script src="https://cn.avoscloud.com/scripts/lib/av-0.4.1.min.js"></script>
+<script src="/js/av-chat-min.js"></script>
+
+<script src="/js/custom.js" type="text/javascript"></script>
+<script src="/js/app.js" type="text/javascript"></script>
+</body>
+</html>
