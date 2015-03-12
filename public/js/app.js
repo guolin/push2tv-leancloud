@@ -109,7 +109,7 @@ var getGuid = (function() {
 })();
 
 var getQQVideo = function(vid){
-    var url = "http://vv.video.qq.com/geturl?otype=json&charge=0&callback=abc&vid="+vid;
+    var url = "//vv.video.qq.com/geturl?otype=json&charge=0&callback=abc&vid="+vid;
     var dtd = $.Deferred();
     $.ajax({
         url:url,
@@ -144,7 +144,7 @@ var getYoukuVideo = function(vid){
         return realId.join('');
     };
     $.ajax({
-        url: 'http://v.youku.com/player/getPlaylist/VideoIDS/' + vid + '/Pf/4?__callback=',
+        url: '//v.youku.com/player/getPlaylist/VideoIDS/' + vid + '/Pf/4?__callback=',
         dataType: "jsonp",
         jsonp: "__callback",
         success: function(param){
