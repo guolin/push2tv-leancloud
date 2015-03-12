@@ -35,7 +35,7 @@ $( document ).ready(function(){
 
     chat.open().then(function(){
         console.log("链接成功");
-        var remoteUrl = "http://"+window.location.host+"/%23!/remote/"+guid;
+        var remoteUrl = "http://"+window.location.host+"/remote.html%23"+guid;
         $.getJSON("/api/short?url="+remoteUrl, function(data){
             console.log(data);
             remoteUrl = data.urls[0].url_short;
