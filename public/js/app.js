@@ -1,13 +1,16 @@
 $( document ).ready(function(){
 
-    var player, guid, chat,
+    var player, guid, chat, default_url,
         appid  = 'fpj2ki9n5sjv9bq6ksk9jhnbrfct4jzg5hzt9e37if092ny7';
 
     player = videojs(document.getElementById('video'));
     player.muted(true);
-    var default_url = "media/splash-bg.mp4";
-    player.src(default_url);
-    player.play();
+    getQQVideo('r0148h3aeeq').done(function(data){
+        default_url = data;
+        player.src(default_url);
+        player.play();
+    });
+    
 
     // step1: 准备数据（获取deviceid，socket链接，短链接，）
     if(!$.cookie("DeviceID")){
